@@ -3,4 +3,41 @@ ls -a # shows all files including those hidden
 git init # initialize new repository
 git status # basic details
 
-What happens when you initialize a repository? Why do you need to do it?
+What happens when you initialize a repository? Why do you need to 
+do it?
+
+Doesn't appear that much happens as it lists files but any changes 
+to those files will be unchanged. I need the repo if I want to 
+commit and track changes to files.
+
+Key commands:
+
+git add <filename> # add to staging area
+git status
+git commit
+git log
+
+How is the staging area different from the working directory and
+the repository? What value do you think it offers?
+
+Staging area appears to be a temporary holding station. Not sure
+what value it offers, but it does allow a few files to be added
+and then commit at the same time to the repo.
+
+Working directory appears to hold all untracked files and is marked 
+'clean' when all files have been commit.
+
+Key commands:
+
+git diff # to compare working directory to staging area
+git diff --staged # to compare staging area to repository
+git reset --hard # discards any changes to working directory and
+staging area !! be very careful when using this !!
+git checkout master # return to HEAD
+
+How can you use the staging area to make sure you have one commit 
+per logical change?
+
+You can compare the changes to the previous commit; it is also 
+helpful to separate the file you want to commit from the rest of
+the files in the working directory.
