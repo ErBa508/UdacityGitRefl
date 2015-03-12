@@ -1,0 +1,6 @@
+Key commands:
+ls -a # shows all files including those hidden
+git init # initialize new repository
+git status # basic details
+
+What happens when you initialize a repository? Why do you need to do it?
