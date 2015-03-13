@@ -64,3 +64,24 @@ How do the diagrams help you visualize the branch structure?
 
 It is key for demonstratic the sequential and non-linear order of 
 commits and branches.
+
+If a branch is deleted and leaves some commits unreachable from 
+existing branches, those commits will continue to be accessible by 
+commit id, until Git’s garbage collection runs. This will happen 
+automatically from time to time, unless you actively turn it off. 
+You can also run this process manually with git gc.
+
+%% Merge %%
+
+git merge master <2nd branch name> # make sure to checkout one of
+the two branches being merged 1st
+git show <command_id> # show what changes occurred between a commit 
+and its parent
+git branch -d <branch2> # deletes branch label (and not commits)
+once merged
+
+What is the result of merging two branches together? Why do we 
+represent it in the diagram the way we do?
+
+Merging two branches together results in one branch. Representing
+in diagram is important to help visualize and check the merge.
