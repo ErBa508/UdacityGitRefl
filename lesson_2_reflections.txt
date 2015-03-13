@@ -53,3 +53,14 @@ What are some situations when branches would be helpful in keeping your history 
 Branches are helpful if you want to experiment with code but keep
 a working copy on another branch; if you have two unique versions
 of code that do different things (different levels); etc.
+
+git log --graph --oneline <branch 1> <branch 2>
+
+git checkout -b <new branch name> # if checkout earlier commit, make
+a change, and then need to give it a new branch name or else that 
+commit will be unreachable
+
+How do the diagrams help you visualize the branch structure?
+
+It is key for demonstratic the sequential and non-linear order of 
+commits and branches.
