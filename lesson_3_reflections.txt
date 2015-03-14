@@ -1,0 +1,16 @@
+## Lesson 3 ## Udacity Git and GitHub
+
+Caching your GitHub password in Git
+https://help.github.com/articles/caching-your-github-password-in-git/
+
+Commands:
+git remote # to view remote repos
+git remote add <origin> <url> # if only one remote, name origin, 
+supply GitHub url
+git remote -v # "verbose" (provides more data)
+git push <remote> <local branch> # i.e. git push origin master
+
+When would you want to use a remote repository rather than keeping all your work local?
+
+Remote repository is useful when working from multiple computers. Remote also a nice
+way to back-up work. 
