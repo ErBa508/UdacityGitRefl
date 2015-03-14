@@ -23,7 +23,10 @@ the repository? What value do you think it offers?
 
 Staging area appears to be a temporary holding station. Not sure
 what value it offers, but it does allow a few files to be added
-and then commit at the same time to the repo.
+and then commit at the same time to the repo. Note 2: allows only
+those files that you want to commit, be committed; in case there
+are other files in the working directory that are not ready to be 
+commit yet.
 
 Working directory appears to hold all untracked files and is 
 marked 'clean' when all files have been commit.
@@ -92,11 +95,9 @@ in diagram is important to help visualize and check the merge.
 Commands to undo a merge:
 
 git merge --abort # if you have not commit the merge and still 
-have
-conflicts
+have conflicts
 git reset --merge ORIG_HEAD # return to original commit before
-the 
-merge; safer than next option bec does not touch uncommitted 
+the merge; safer than next option bec does not touch uncommitted 
 changes
 git reset --hard ORIG_HEAD # return to original commit
 
