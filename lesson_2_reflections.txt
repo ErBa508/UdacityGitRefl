@@ -6,9 +6,9 @@ git status # basic details
 What happens when you initialize a repository? Why do you need to 
 do it?
 
-Doesn't appear that much happens as it lists files but any changes 
-to those files will be unchanged. I need the repo if I want to 
-commit and track changes to files.
+Doesn't appear that much happens as it lists files but any 
+changes to those files will be unchanged. I need the repo if I 
+want to commit and track changes to files.
 
 Key commands:
 
@@ -16,6 +16,7 @@ git add <filename> # add to staging area
 git status
 git commit
 git log
+git log -n1 # view log for only last commit
 
 How is the staging area different from the working directory and
 the repository? What value do you think it offers?
@@ -24,8 +25,8 @@ Staging area appears to be a temporary holding station. Not sure
 what value it offers, but it does allow a few files to be added
 and then commit at the same time to the repo.
 
-Working directory appears to hold all untracked files and is marked 
-'clean' when all files have been commit.
+Working directory appears to hold all untracked files and is 
+marked 'clean' when all files have been commit.
 
 Key commands:
 
@@ -48,7 +49,8 @@ git branch # view list of branches, * refers to checked out branch
 git branch <branch name> # make new branch
 git checkout <branch name> # switch to new branch
 
-What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+What are some situations when branches would be helpful in 
+keeping your history organized? How would branches help?
 
 Branches are helpful if you want to experiment with code but keep
 a working copy on another branch; if you have two unique versions
@@ -56,9 +58,9 @@ of code that do different things (different levels); etc.
 
 git log --graph --oneline <branch 1> <branch 2>
 
-git checkout -b <new branch name> # if checkout earlier commit, make
-a change, and then need to give it a new branch name or else that 
-commit will be unreachable
+git checkout -b <new branch name> # if checkout earlier commit, 
+make a change, and then need to give it a new branch name or else 
+that commit will be unreachable
 
 How do the diagrams help you visualize the branch structure?
 
@@ -66,16 +68,17 @@ It is key for demonstratic the sequential and non-linear order of
 commits and branches.
 
 If a branch is deleted and leaves some commits unreachable from 
-existing branches, those commits will continue to be accessible by 
-commit id, until Git’s garbage collection runs. This will happen 
-automatically from time to time, unless you actively turn it off. 
-You can also run this process manually with git gc.
+existing branches, those commits will continue to be accessible
+by commit id, until Git’s garbage collection runs. This will 
+happen automatically from time to time, unless you actively turn
+it off. You can also run this process manually with git gc.
 
 %% Merge %%
 
 git merge master <2nd branch name> # make sure to checkout one of
 the two branches being merged 1st
-git show <command_id> # show what changes occurred between a commit 
+git show <command_id> # show what changes occurred between a 
+commit 
 and its parent
 git branch -d <branch2> # deletes branch label (and not commits)
 once merged
@@ -85,3 +88,23 @@ represent it in the diagram the way we do?
 
 Merging two branches together results in one branch. Representing
 in diagram is important to help visualize and check the merge.
+
+Commands to undo a merge:
+
+git merge --abort # if you have not commit the merge and still 
+have
+conflicts
+git reset --merge ORIG_HEAD # return to original commit before
+the 
+merge; safer than next option bec does not touch uncommitted 
+changes
+git reset --hard ORIG_HEAD # return to original commit
+
+What are the pros and cons of Git’s automatic merging vs. always
+doing merges manually?
+
+Automatic merging is nice provided there are no mistakes and the
+algorithm used to merge is reliable. Always merging allows one to
+check that merges work correctly but human error could be a 
+problem as well.
+
