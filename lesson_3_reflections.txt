@@ -41,3 +41,27 @@ Fork is when I want a copy of someone else's repo; clone is when I
 want a copy of my repo, either from remote or from local to local;
 and branch is when I want to make a new commit that branches off
 of master.
+
+## Merging remote changes ##
+
+git branch -a # to view all branches
+git fetch origin # instead of git pull; starts new branch and 
+allows for git log/diff comparison; for potentially conflicting 
+changes
+git status # to reveal diverged branch & origin/master
+git log origin/master # to reveal commits from remote
+
+option 1:
+git pull origin master
+
+option 2:
+git fetch origin
+git merge master origin/master # which then may report a conflict
+git add <merged master file> # add and commit once resolve conflict
+git commit # no file name for this one
+git push origin master
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+It is helpful to compare the progress of the local branch relative 
+to origin/master when offline. 
