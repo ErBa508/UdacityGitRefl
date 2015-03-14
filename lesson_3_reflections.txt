@@ -10,7 +10,21 @@ supply GitHub url
 git remote -v # "verbose" (provides more data)
 git push <remote> <local branch> # i.e. git push origin master
 
-When would you want to use a remote repository rather than keeping all your work local?
+When would you want to use a remote repository rather than keeping 
+all your work local?
 
-Remote repository is useful when working from multiple computers. Remote also a nice
-way to back-up work. 
+Remote repository is useful when working from multiple computers. 
+Remote also a nice way to back-up work.
+
+
+## Pull ##
+
+git pull origin master # pull new changes from GitHub
+
+
+Why might you want to always pull changes manually rather than 
+having Git automatically stay up-to-date with your remote 
+repository?
+
+Manual pull gives the user more control in deciding when the best
+time to pull is, especially if a conflict might occur.
