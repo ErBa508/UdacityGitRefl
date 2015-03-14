@@ -28,3 +28,16 @@ repository?
 
 Manual pull gives the user more control in deciding when the best
 time to pull is, especially if a conflict might occur.
+
+## Clone ##
+
+git clone <url> # clone from remote the repo using github url
+
+
+Describe the differences between forks, clones, and branches. When 
+would you use one instead of another?
+
+Fork is when I want a copy of someone else's repo; clone is when I 
+want a copy of my repo, either from remote or from local to local;
+and branch is when I want to make a new commit that branches off
+of master.
